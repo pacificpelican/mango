@@ -1,17 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>web-component-boilerplate</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <head>
+    <title>web-component-boilerplate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
 
-<body>
-  <div id="container">
-    <main id="main"></main>
-    <script type="module" src="/src/index.js"></script>
-  </div>
-</body>
+  <body>
+    <div id="container">
+      <header>
+        <span id="description">Welcome to our family's photos</span>
+      </header>
+      <h1>page_title</h1>
+      <section id="mainContainer">
+        <main id="main">
+          <img src="https://sf3am.com/static/img/Amoeba-Music-on-Haight-Street--San-Francisco--Sept2009-byDanielJMcKeown.jpg" id="hero" class="mainImg" />
+        </main>
+        <aside>sidebar</aside>
+      </section>
 
+      <section id="gallery">
+
+          <img src="https://frannordstromguild.org/wp-content/uploads/2020/08/FNG-Oktoberfest-SavetheDate_3.jpg"  class="mainImg" />
+
+
+          <img src="https://sf3am.com/static/img/Amoeba-Music-on-Haight-Street--San-Francisco--Sept2009-byDanielJMcKeown.jpg"  class="mainImg" />
+  
+      
+          <img src="https://sf3am.com/static/img/Amoeba-Music-on-Haight-Street--San-Francisco--Sept2009-byDanielJMcKeown.jpg"  class="mainImg" />
+        
+    
+          <img src="https://sf3am.com/static/img/Amoeba-Music-on-Haight-Street--San-Francisco--Sept2009-byDanielJMcKeown.jpg" class="mainImg" />
+  
+      </section>
+     
+      <section id="container">
+
+        <div id="app" class="layout">
+          <span>__</span>
+          <p id="cookies"><i>This site uses cookies!!</i></p>
+          <aside id="side">sidebar</aside>
+        </div>
+    
+      </section>
+    
+    </div>
+  </body>
+
+<style>
+  div#app {
+    background: yellow;
+    color: #967f7d;
+    border-radius: 2px;
+  }
+  img#hero {
+    width: calc(80vw);
+  }
+  section#gallery {
+    display: inline-block;
+  }
+  section#gallery img {
+    width: calc(20vw);
+  }
+  @media only screen and (min-width: 801px) {
+    section#mainContainer {
+      display: flex;
+    }
+  }
+  
+</style>
+<script type="module">
+//  alert('this site uses cookies');
+setTimeout(function(){
+  let image = document.querySelector("#hero");
+  image.src = 'https://frannordstromguild.org/wp-content/uploads/2020/08/FNG-Oktoberfest-SavetheDate_3.jpg'
+}, 2000)
+
+</script>
 </html>
